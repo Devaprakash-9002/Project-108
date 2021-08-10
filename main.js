@@ -5,6 +5,11 @@ Webcam.set({
     png_quality: 90
 });
 
+function check() {
+    img = document.getElementById("captured_image");
+    classifier.classify(img, gotResult);
+}
+
 camera = document.getElementById("camera");
 Webcam.attach("#camera");
 
